@@ -34,6 +34,7 @@ ul, li {
 
 .logo {
     font-size: 18px;
+    letter-spacing: 0.03em;
 }
 
 .nav-element {
@@ -188,15 +189,3 @@ ul, li {
     letter-spacing: 0.02em;
 }
 
-/* Адаптивність */
-@media (max-width: 900px) {
-  .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
-}
