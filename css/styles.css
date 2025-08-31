@@ -1,201 +1,90 @@
-/* Google Fonts підключаються у HTML через <link> */
+/* Основні стилі */
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  color: #434455;
+  background-color: #ffffff;
+  color: #212121;
 }
 
-/* HEADER */
-.header-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #2e2f42;
-}
-
-.header-nav a {
+/* Скидання дефолтних стилів для списків та посилань */
+a {
   text-decoration: none;
-  color: #ffffff;
+  color: inherit;
 }
 
-.header-nav ul {
+ul, li {
   list-style: none;
-  padding: 0;
   margin: 0;
-  display: flex;
-  gap: 20px;
-}
-
-.header-address {
-  font-style: normal;
-}
-
-.header-address ul {
-  list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-/* HERO */
-.hero-section {
-  text-align: center;
-  background-color: #2e2f42;
-  padding: 60px 20px;
-}
-
-.hero-title {
-  font-size: 56px;
-  line-height: 1.07;
-  letter-spacing: 0.02em;
-  color: #ffffff;
-  text-align: center;
-}
-
-.hero-button {
-  background-color: #4D5AE5;
-  color: #ffffff;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  font-family: inherit;
-  cursor: pointer;
-  border: none;
-  padding: 12px 24px;
-  margin-top: 20px;
-}
-
-.hero-button:hover,
-.hero-button:focus {
-  background-color: #404BBF;
-}
-
-/* ADVANTAGES SECTION */
-.advantages-section {
-  background-color: #F4F4FD;
-  padding: 40px 20px;
-}
-
-.advantages-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.advantages-item {
-  background-color: #FFFFFF;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-.advantages-item h3 {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-}
-
-.advantages-item p {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #434455;
-}
-
-/* TEAM SECTION */
-.team-section {
-  padding: 40px 20px;
-}
-
-.team-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.team-item {
-  text-align: center;
-}
-
-.team-item h3 {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-}
-
-.team-item p {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #434455;
-}
-
-/* PORTFOLIO / SERVICES SECTION */
-.services-section {
-  background-color: #F4F4FD;
+/* Секція Portfolio */
+.portfolio-section {
   padding: 40px 20px;
   text-align: center;
 }
 
-.services-section h2 {
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  color: #2e2f42;
+.portfolio-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
   margin-bottom: 40px;
 }
 
-.services-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+/* Grid карток */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.services-item {
-  background-color: #FFFFFF;
-  padding: 20px;
-  width: 300px;
-  text-align: center;
+/* Картка проекту */
+.portfolio-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
 }
 
-.services-item img {
-  width: 360px;
+.portfolio-card:hover,
+.portfolio-card:focus {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.portfolio-card img {
+  width: 100%;
   height: auto;
+  display: block;
 }
 
-.services-item h3 {
+.portfolio-card__name {
+  font-size: 18px;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-  margin: 10px 0 5px;
+  margin: 16px;
 }
 
-.services-item p {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #434455;
+.portfolio-card__category {
+  color: #666;
+  margin: 0 16px 16px;
+  font-weight: 400;
 }
 
-/* FOOTER */
-footer {
-  background-color: #2e2f42;
-  color: #ffffff;
-  padding: 40px 20px;
-  text-align: center;
+/* Адаптивність */
+@media (max-width: 900px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
 }
