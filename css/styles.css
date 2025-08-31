@@ -1,90 +1,260 @@
-/* Основні стилі */
+/* ====== GLOBAL STYLES ====== */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+  color: #434455;
+  background-color: #FFFFFF;
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
-  color: #212121;
 }
 
-/* Скидання дефолтних стилів для списків та посилань */
-a {
+/* ====== HEADER ====== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #2e2f42;
+}
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #4d5ae5;
   text-decoration: none;
-  color: inherit;
 }
 
-ul, li {
+.logo span {
+  color: #2e2f42;
+}
+
+.nav-list {
   list-style: none;
-  margin: 0;
+  display: flex;
+  gap: 20px;
   padding: 0;
+  margin: 0;
 }
 
-/* Секція Portfolio */
+.nav-link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #404bbf;
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-link {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+  text-decoration: none;
+}
+
+.contact-link:hover,
+.contact-link:focus {
+  color: #404bbf;
+}
+
+/* ====== HERO SECTION ====== */
+.section-1 {
+  background-color: #2e2f42;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.section-1 .section-title {
+  font-size: 56px;
+  line-height: 1.07;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.section-1 .section-btn {
+  background-color: #4D5AE5;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  border: none;
+  padding: 15px 30px;
+  cursor: pointer;
+}
+
+.section-1 .section-btn:hover,
+.section-1 .section-btn:focus {
+  background-color: #404BBF;
+}
+
+/* ====== ADVANTAGES ====== */
+.section-2 {
+  padding: 60px 20px;
+}
+
+.features-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  margin-bottom: 10px;
+}
+
+.feature-desc {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+
+/* ====== TEAM ====== */
+.section-3 {
+  background-color: #F4F4FD;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-3 h2 {
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #2e2f42;
+  margin-bottom: 40px;
+}
+
+.section-3 ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.section-3 li h3 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+}
+
+.section-3 li p {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+
+/* ====== PORTFOLIO ====== */
 .portfolio-section {
-  padding: 40px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
 .portfolio-title {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 32px;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #2e2f42;
   margin-bottom: 40px;
 }
 
-/* Grid карток */
 .portfolio-grid {
+  list-style: none;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 24px;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
+  padding: 0;
 }
 
-/* Картка проекту */
 .portfolio-card {
-  background-color: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  text-align: left;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
-  cursor: pointer;
-}
-
-.portfolio-card:hover,
-.portfolio-card:focus {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background-color: #FFFFFF;
+  padding: 15px;
 }
 
 .portfolio-card img {
-  width: 100%;
+  width: 360px;
   height: auto;
-  display: block;
 }
 
-.portfolio-card__name {
-  font-size: 18px;
+.portfolio-card-title {
   font-weight: 500;
-  margin: 16px;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
 }
 
-.portfolio-card__category {
-  color: #666;
-  margin: 0 16px 16px;
-  font-weight: 400;
+.portfolio-card-category {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
 }
 
-/* Адаптивність */
-@media (max-width: 900px) {
-  .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* ====== FOOTER ====== */
+.footer {
+  background-color: #2e2f42;
+  text-align: center;
+  padding: 40px 20px;
 }
 
-@media (max-width: 600px) {
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
+.footer-logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #4d5ae5;
+  text-decoration: none;
+}
+
+.footer-logo span {
+  color: #f4f4fd;
+}
+
+.footer-text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #F4F4FD;
+  margin-top: 15px;
 }
